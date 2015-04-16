@@ -1,0 +1,25 @@
+CREATE TABLE BX_Books (
+  ISBN varchar(13) NOT NULL default '',
+  Book_Title varchar(255) default NULL,
+  Book_Author varchar(255) default NULL,
+  Year_Of_Publication int(10) default NULL,
+  Publisher varchar(255) default NULL,
+  S varchar(255) default NULL,
+  M varchar(255) default NULL,
+  L varchar(255) default NULL,
+  PRIMARY KEY  (ISBN)
+);
+
+CREATE TABLE BX_Users (
+  User_ID int(11) NOT NULL default '0',
+  Location varchar(250) default NULL,
+  Age int(11) default NULL,
+  PRIMARY KEY  (User_ID)
+); 
+
+CREATE TABLE BX_Book_Ratings (
+  User_ID int(11) NOT NULL default '0',
+  ISBN varchar(13) NOT NULL default '',
+  Book_Rating int(11) NOT NULL default '0',
+  PRIMARY KEY  (User_ID,ISBN)
+);
